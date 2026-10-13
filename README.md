@@ -32,7 +32,9 @@
 </div>
 
 <p align="center">
-  <img src="assets/overview.png" width="96%" alt="SafeDriveVLA overview">
+  <a href="https://safedrive-vla.github.io/SafeDriveVLA/assets/videos/overview.mp4">
+    <img src="assets/overview_video.jpg" width="96%" alt="Watch the two-minute SafeDriveVLA overview video">
+  </a>
 </p>
 
 ## About
@@ -45,6 +47,10 @@ We then propose **SafeDriveVLA**, which decouples conflict reasoning from action
 
 - **Driving mode.** Every expert frame is relabeled with a discrete driving mode (`<STRICT>`, `<CAUTIOUS>` or `<FALLBACK>`) that states whether the trajectory executes, cautiously follows, or overrides the navigation signal. The model emits this mode token before its actions, so conflict awareness is supervised directly.
 - **Navigation-conditioned world model dreaming.** A frozen latent world model (V-JEPA 2 encoder with an action-conditioned predictor) rolls the scene forward under the action anchor of the instructed meta-command. The VLA reads the dreamed world tokens and sees whether the maneuver is feasible before it commits.
+
+<p align="center">
+  <img src="assets/overview.png" width="96%" alt="SafeDriveVLA overview">
+</p>
 
 ## Citation
 
