@@ -4,11 +4,11 @@
 
 <a href="https://daniel-xsy.github.io/">Shaoyuan Xie</a><sup>1,&#42;</sup>&nbsp;&nbsp;
 <a href="https://scholar.google.com/citations?user=_vyPx10AAAAJ&hl=en">Zihan Zhang</a><sup>2,&#42;</sup>&nbsp;&nbsp;
-<a href="https://openreview.net/profile?id=~Jingxuan_Wang3">Jingxuan Wang</a><sup>3</sup>&nbsp;&nbsp;
-<a href="https://scholar.google.com/citations?user=HHcfu5MAAAAJ&hl=en">Jiashu Qu</a><sup>4</sup>&nbsp;&nbsp;
+<a href="https://openreview.net/profile?id=~Jingxuan_Wang3">Jingxuan Wang</a><sup>1</sup>&nbsp;&nbsp;
+<a href="https://scholar.google.com/citations?user=HHcfu5MAAAAJ&hl=en">Jiashu Qu</a><sup>3</sup>&nbsp;&nbsp;
 <a href="https://scholar.google.com/citations?user=BpCNwaAAAAAJ&hl=en">Xiaoqing Liang</a><sup>1</sup>
 <br>
-<a href="https://ldkong.com/">Lingdong Kong</a><sup>5</sup>&nbsp;&nbsp;
+<a href="https://ldkong.com/">Lingdong Kong</a><sup>4</sup>&nbsp;&nbsp;
 <a href="https://openreview.net/profile?id=~Junchi_Lu1">Junchi Lu</a><sup>1</sup>&nbsp;&nbsp;
 <a href="https://hichristensen.com/">Henrik I. Christensen</a><sup>2</sup>&nbsp;&nbsp;
 <a href="https://www.ics.uci.edu/~alfchen/">Qi Alfred Chen</a><sup>1</sup>
@@ -17,11 +17,9 @@
 &nbsp;&nbsp;·&nbsp;&nbsp;
 <img src="assets/logos/ucsd.png" height="20" alt="UC San Diego logo"> <sup>2</sup> UC San Diego
 &nbsp;&nbsp;·&nbsp;&nbsp;
-<img src="assets/logos/usc.png" height="20" alt="USC logo"> <sup>3</sup> USC
+<img src="assets/logos/uc.png" height="20" alt="University of Cincinnati logo"> <sup>3</sup> U. Cincinnati
 &nbsp;&nbsp;·&nbsp;&nbsp;
-<img src="assets/logos/uc.png" height="20" alt="University of Cincinnati logo"> <sup>4</sup> U. Cincinnati
-&nbsp;&nbsp;·&nbsp;&nbsp;
-<img src="assets/logos/nus.png" height="20" alt="NUS logo"> <sup>5</sup> NUS
+<img src="assets/logos/nus.png" height="20" alt="NUS logo"> <sup>4</sup> NUS
 <br>
 <sup>&#42;</sup>Equal contribution
 
