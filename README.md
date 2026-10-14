@@ -85,7 +85,7 @@ Please refer to [install.md](docs/install.md) for the environment setup and data
 
 ## Getting Started
 
-Coming soon, together with the pretrained checkpoints.
+Please refer to [getting_started.md](docs/getting_started.md) for training and closed-loop evaluation, including the released checkpoints.
 
 ## Benchmarks
 
@@ -175,7 +175,7 @@ Avg. is weighted by the number of instructions per meta-command and excludes spe
 - [x] Closed-loop evaluation on Bench2Drive, CARLA-F, B2D-C and B2D-Adv
 - [x] Benchmark route files and generation toolkit
 - [x] Installation and data preparation guide
-- [ ] Getting-started guide for training and evaluation
+- [x] Getting-started guide for training and evaluation
 - [x] Pretrained checkpoints
 - [ ] NavSim-C benchmark
 
