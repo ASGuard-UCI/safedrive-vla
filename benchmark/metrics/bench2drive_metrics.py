@@ -1,14 +1,14 @@
 """Closed-loop metrics of Bench2Drive, B2D-C and B2D-Adv.
 
-* Driving Score (DS) and Success Rate (SR) over a fixed number of routes
-  (missing or crashed routes count as zero), following Bench2Drive.
+* Driving Score (DS) and Success Rate (SR) over the route files of the
+  benchmark (missing or crashed routes count as zero), following Bench2Drive.
 * Infraction breakdown used for B2D-C (Sec. 3.2): collisions (layout,
   pedestrian, vehicle), traffic violations (red light, stop sign) and
   out-of-route.
 * Driving Efficiency and Comfortness (Driving Smoothness) of Bench2Drive,
   computed with the official ``third_party/bench2drive/tools`` code.
 
-    python benchmark/metrics/bench2drive_metrics.py work_dirs/eval/bench2drive --num-routes 220
+    python benchmark/metrics/bench2drive_metrics.py work_dirs/eval/bench2drive --routes-dir benchmark/data/bench2drive
 """
 
 from __future__ import annotations
@@ -74,8 +74,10 @@ def comfortness(viz_dir: Path, route_names) -> float:
     return 100.0 * float(np.mean(scores)) if scores else float("nan")
 
 
-def evaluate(output_dir: Path, num_routes: int) -> dict:
-    complete = sorted(p for p in (output_dir / "res").glob("*_res.json") if result_is_complete(p))
+def evaluate(output_dir: Path, routes_dir: Path) -> dict:
+    names = sorted(p.stem for p in routes_dir.glob("*.xml"))
+    num_routes = len(names)
+    complete = [p for p in (output_dir / "res" / f"{n}_res.json" for n in names) if result_is_complete(p)]
     records = [r for p in complete for r in json.loads(p.read_text())["_checkpoint"]["records"]]
     scores = [r["scores"]["score_composed"] for r in records]
 
@@ -98,11 +100,11 @@ def evaluate(output_dir: Path, num_routes: int) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("output_dir", type=Path, help="output directory of tools/run_distributed_eval.py")
-    parser.add_argument("--num-routes", type=int, required=True, help="routes of the benchmark (denominator)")
+    parser.add_argument("--routes-dir", type=Path, required=True, help="route files of the benchmark (one route each)")
     args = parser.parse_args()
-    metrics = evaluate(args.output_dir, args.num_routes)
-    if metrics["evaluated_routes"] < args.num_routes:
-        print(f"Warning: {args.num_routes - metrics['evaluated_routes']} routes are missing and count as zero.")
+    metrics = evaluate(args.output_dir, args.routes_dir)
+    if metrics["evaluated_routes"] < metrics["num_routes"]:
+        print(f"Warning: {metrics['num_routes'] - metrics['evaluated_routes']} routes are missing and count as zero.")
     for key, value in metrics.items():
         print(f"{key:>20}: {value:.2f}" if isinstance(value, float) else f"{key:>20}: {value}")
     with open(args.output_dir / "metrics.json", "w") as f:
