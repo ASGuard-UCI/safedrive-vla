@@ -68,6 +68,7 @@ If you find this work helpful, please consider citing:
 ## Updates
 
 - **[2026.10]** The code of SafeDriveVLA (CoRL 2026) is released: world-model pre-training, VLA training, and closed-loop evaluation on Bench2Drive, CARLA-F, B2D-C and B2D-Adv.
+- **[2026.10]** The CARLA-F and B2D-C datasets have been extended to Track 3 of the [RoboWorld Challenge](https://roboworld2026.github.io/) at NeurIPS 2026 [RoboPAD](https://robotpad2026.github.io/) workshop. See the track [homepage](https://roboworld2026.github.io/track3.html) and GitHub [repo](https://github.com/roboworld2026/track3) for more details
 
 ## Outline
 
