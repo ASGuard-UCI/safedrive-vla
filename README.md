@@ -23,7 +23,7 @@
 <br>
 <sup>&#42;</sup>Equal contribution
 
-<a href=""><img src="https://img.shields.io/badge/arXiv-Paper-b31b1b?style=flat" alt="arXiv"></a>
+<a href="https://arxiv.org/abs/2610.20609"><img src="https://img.shields.io/badge/arXiv-2610.20609-b31b1b?style=flat" alt="arXiv"></a>
 <a href="https://safedrive-vla.github.io/SafeDriveVLA/"><img src="https://img.shields.io/badge/Project-Page-1f72ff?style=flat" alt="Project Page"></a>
 <a href="https://huggingface.co/Danielxsy/safedrive-vla"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-ffd21e?style=flat" alt="Hugging Face"></a>
 <a href="https://www.corl.org/"><img src="https://img.shields.io/badge/CoRL-2026-8a2be2?style=flat" alt="CoRL 2026"></a>
